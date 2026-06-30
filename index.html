@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashaswee Veeraboyina — Aspiring Software Developer & Cybersecurity Enthusiast</title>
+  <meta name="description" content="Portfolio of Yashaswee Veeraboyina — B.Tech CSE student at Amrita Vishwa Vidyapeetham, Bangalore, building projects in cybersecurity and full-stack development." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts: Sora (display), Inter (body), IBM Plex Mono (utility/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles (load order matters: tokens → reset → layout → components → motion → breakpoints) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ SKIP LINK ============ -->
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">YASH<span>.</span>DEV</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#certifications" class="nav__link">Achievements</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="assets/resume/Yashaswee_Veeraboyina_Resume.pdf" download class="btn btn--secondary" style="display:none;" id="navResumeBtn">
+          Resume
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+          <span>
+            <span class="nav__toggle-bar" id="bar1"></span>
+            <span class="nav__toggle-bar" id="bar2"></span>
+            <span class="nav__toggle-bar" id="bar3"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV DRAWER ============ -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <button class="nav-drawer__close btn btn--secondary" id="navDrawerClose" aria-label="Close menu">✕</button>
+    <a href="#about" class="nav-drawer__link">About</a>
+    <a href="#education" class="nav-drawer__link">Education</a>
+    <a href="#skills" class="nav-drawer__link">Skills</a>
+    <a href="#projects" class="nav-drawer__link">Projects</a>
+    <a href="#certifications" class="nav-drawer__link">Achievements</a>
+    <a href="#resume" class="nav-drawer__link">Resume</a>
+    <a href="#contact" class="nav-drawer__link">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="glow-blob glow-blob--red" style="width:480px; height:480px; top:-120px; left:-100px;"></div>
+      <div class="glow-blob glow-blob--blue" style="width:420px; height:420px; bottom:-140px; right:-80px;"></div>
+      <div class="scan-line" style="top:0;"></div>
+      <canvas id="particles" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <div class="hero__content">
+          <p class="mono-label hero__eyebrow" style="display:flex; align-items:center; gap:var(--space-2); margin-bottom:var(--space-5);">
+            <span class="status-dot"></span>
+            STATUS: OPEN TO INTERNSHIPS
+          </p>
+
+          <h1 class="hero__title" style="margin-bottom:var(--space-5);">
+            Yashaswee Veeraboyina
+          </h1>
+
+          <p class="hero__subtitle" style="font-size:var(--fs-body-lg); max-width:560px; margin-bottom:var(--space-7);">
+            Aspiring Software Developer & Cybersecurity Enthusiast<span class="cursor-blink" aria-hidden="true"></span>
+          </p>
+
+          <div class="hero__cta" style="display:flex; gap:var(--space-4); flex-wrap:wrap;">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="assets/resume/Yashaswee_Veeraboyina_Resume.pdf" download class="btn btn--secondary">Download Resume</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue">
+        <span class="mono-label" style="font-size:var(--fs-mono-xs);">SCROLL</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-text-secondary);">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// ABOUT</span>
+          </div>
+          <h2 class="section__title">A bit about me</h2>
+        </div>
+
+        <div class="about__grid">
+          <div data-reveal>
+            <p class="hero__subtitle" style="font-size:var(--fs-body-lg); color:var(--color-text-primary); margin-bottom:var(--space-5);">
+              I'm a third-year B.Tech Computer Science student who likes turning ideas into working systems.
+            </p>
+            <p style="margin-bottom:var(--space-4);">
+              My focus is split between cybersecurity and practical software development — I enjoy understanding how systems break as much as I enjoy building them. Most of my learning happens through hands-on projects rather than theory alone, using Python, Java, C, and modern web technologies.
+            </p>
+            <p>
+              I'm currently looking for internship opportunities where I can learn quickly, contribute to real problems, and grow inside an experienced engineering team.
+            </p>
+          </div>
+
+          <div class="card" data-reveal data-reveal-delay="2">
+            <p class="mono-label" style="margin-bottom:var(--space-5);">QUICK FACTS</p>
+
+            <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+              <div>
+                <p class="mono-label" style="color:var(--color-text-tertiary); font-size:var(--fs-mono-xs); margin-bottom:2px;">BASED IN</p>
+                <p style="color:var(--color-text-primary);">Bangalore, Karnataka — originally from Tirupati, Andhra Pradesh</p>
+              </div>
+              <div>
+                <p class="mono-label" style="color:var(--color-text-tertiary); font-size:var(--fs-mono-xs); margin-bottom:2px;">STUDYING AT</p>
+                <p style="color:var(--color-text-primary);">Amrita Vishwa Vidyapeetham, Bangalore</p>
+              </div>
+              <div>
+                <p class="mono-label" style="color:var(--color-text-tertiary); font-size:var(--fs-mono-xs); margin-bottom:2px;">FOCUS AREAS</p>
+                <p style="color:var(--color-text-primary);">Cybersecurity · Full-Stack Development</p>
+              </div>
+              <div>
+                <p class="mono-label" style="color:var(--color-text-tertiary); font-size:var(--fs-mono-xs); margin-bottom:2px;">CURRENTLY BUILDING</p>
+                <p style="color:var(--color-text-primary);">Cyber Twin — an AI-powered cybersecurity assistant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// EDUCATION</span>
+          </div>
+          <h2 class="section__title">Academic background</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+              <span class="timeline-item__line"></span>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2024 — 2028</p>
+              <h3 class="timeline-item__title">B.Tech, Computer Science & Engineering</h3>
+              <p class="timeline-item__meta">Amrita Vishwa Vidyapeetham, Bangalore</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal data-reveal-delay="1">
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+              <span class="timeline-item__line"></span>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2022 — 2024</p>
+              <h3 class="timeline-item__title">Intermediate (Class XII), MPC</h3>
+              <p class="timeline-item__meta">Sanskriti Junior College</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal data-reveal-delay="2">
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+            </div>
+            <div class="timeline-item__content">
+              <p class="timeline-item__period">2021 — 2022</p>
+              <h3 class="timeline-item__title">Secondary School (Class X)</h3>
+              <p class="timeline-item__meta">Edify School, Tirupati</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// SKILLS</span>
+          </div>
+          <h2 class="section__title">Tools I build with</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill-chip" data-reveal>
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            <span class="skill-chip__label">Java</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="1">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            <span class="skill-chip__label">C</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="2">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            <span class="skill-chip__label">Python</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="3">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span class="skill-chip__label">FastAPI</span>
+          </div>
+          <div class="skill-chip" data-reveal>
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg>
+            <span class="skill-chip__label">React</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="1">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l1.5 16L12 22l6.5-2L20 4H4z"/><path d="M7.5 8h9l-.3 3.5H10l.2 2.2 1.8.6 1.8-.6.2-2.2"/></svg>
+            <span class="skill-chip__label">HTML</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="2">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l1.5 16L12 22l6.5-2L20 4H4z"/><path d="M16.5 8h-9l.3 3.5H16l-.4 4.8L12 17.4l-3.6-1.1-.2-2.3"/></svg>
+            <span class="skill-chip__label">CSS</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="3">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l-5-6 5-6M15 6l5 6-5 6"/></svg>
+            <span class="skill-chip__label">JavaScript</span>
+          </div>
+          <div class="skill-chip" data-reveal>
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3V15.7M8 6.5l8 4M8 17.5l8-4"/></svg>
+            <span class="skill-chip__label">Git</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="1">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg>
+            <span class="skill-chip__label">GitHub</span>
+          </div>
+          <div class="skill-chip" data-reveal data-reveal-delay="2">
+            <svg class="skill-chip__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.5 3L4 8.5v7L9.5 21l5.5-3v-2.5M14 7L9 12M14 7l3-3M14 7h3.5M14 7V3.5"/></svg>
+            <span class="skill-chip__label">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// PROJECTS</span>
+          </div>
+          <h2 class="section__title">Things I've built</h2>
+          <p class="section__subtitle">Academic and self-driven projects spanning web development, applied math, and security tooling.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- Style!Snap -->
+          <article class="card project-card" data-reveal>
+            <div class="project-card__top">
+              <h3 class="project-card__title">Style!Snap</h3>
+            </div>
+            <p class="project-card__desc">
+              A Pinterest-style fashion discovery platform with category-based image browsing, a responsive gallery layout, and a dark-themed, mobile-friendly UI for exploring outfit inspiration.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yashveera29p2-art/Stylesnap1" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg>
+                Source
+              </a>
+            </div>
+          </article>
+
+          <!-- Tennis Endurance Research -->
+          <article class="card project-card" data-reveal data-reveal-delay="1">
+            <div class="project-card__top">
+              <h3 class="project-card__title">Player Endurance & Win Probability</h3>
+            </div>
+            <p class="project-card__desc">
+              A mathematical modeling research project studying how player fatigue affects winning probability in tennis, using Geometric and Exponential Distributions. Co-authored with faculty and peers, validated against real professional match statistics.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">Probability Modeling</span>
+              <span class="tag">Research</span>
+            </div>
+          </article>
+
+          <!-- Cyber Twin -->
+          <article class="card project-card" data-reveal data-reveal-delay="2">
+            <div class="project-card__top">
+              <h3 class="project-card__title">Cyber Twin</h3>
+              <span class="badge badge--progress"><span class="status-dot"></span>In Progress</span>
+            </div>
+            <p class="project-card__desc">
+              An AI-powered cybersecurity assistant that detects phishing emails, analyzes suspicious URLs, and explains threats in plain language. Integrates the Google Gemini API for a conversational chatbot that gives personalized security recommendations and a Security Health Score.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">Gemini API</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yashveera29p2-art" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg>
+                In Progress — Local Build
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS & ACHIEVEMENTS ============ -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// CERTIFICATIONS & ACHIEVEMENTS</span>
+          </div>
+          <h2 class="section__title">Recognition & participation</h2>
+        </div>
+
+        <div class="cert__grid">
+          <div class="card cert-card" data-reveal>
+            <div class="cert-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3 class="cert-card__title">Guidewire DEVTrails University Hackathon 2026</h3>
+              <p class="cert-card__meta">Certificate of Participation · In partnership with EY & National Insurance Academy</p>
+            </div>
+          </div>
+
+          <div class="card cert-card" data-reveal data-reveal-delay="1">
+            <div class="cert-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <div>
+              <h3 class="cert-card__title">College-Level Hackathons</h3>
+              <p class="cert-card__meta">Solved real-world problem statements in Java, Python & C — team settings</p>
+            </div>
+          </div>
+
+          <div class="card cert-card" data-reveal data-reveal-delay="2">
+            <div class="cert-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div>
+              <h3 class="cert-card__title">Exam-Based Hackathons</h3>
+              <p class="cert-card__meta">OOP (Java) and C — solutions built under strict time constraints</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME DOWNLOAD ============ -->
+    <section class="section" id="resume" style="padding-top:0;">
+      <div class="container">
+        <div class="resume-band" data-reveal>
+          <div>
+            <p class="mono-label" style="margin-bottom:var(--space-3);">// RESUME</p>
+            <h2 style="font-size:var(--fs-display-md); margin-bottom:var(--space-2);">Want the full picture?</h2>
+            <p>Download my resume for a complete summary of my education, skills, and project work.</p>
+          </div>
+          <a href="assets/resume/Yashaswee_Veeraboyina_Resume.pdf" download class="btn btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <div class="section__eyebrow">
+            <span class="status-dot"></span>
+            <span class="mono-label">// CONTACT</span>
+          </div>
+          <h2 class="section__title">Let's talk</h2>
+          <p class="section__subtitle">Open to internship opportunities, collaborations, and a good conversation about cybersecurity.</p>
+        </div>
+
+        <div class="contact__grid">
+          <a href="mailto:yashveera29p2@gmail.com" class="card contact-card" data-reveal>
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+            </div>
+            <div>
+              <p class="contact-card__label">Email</p>
+              <p class="contact-card__value">yashveera29p2@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+918984291999" class="card contact-card" data-reveal data-reveal-delay="1">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z"/></svg>
+            </div>
+            <div>
+              <p class="contact-card__label">Phone</p>
+              <p class="contact-card__value">+91 89842 91999</p>
+            </div>
+          </a>
+        </div>
+
+        <div style="display:flex; gap:var(--space-3); margin-top:var(--space-6);" data-reveal data-reveal-delay="2">
+          <a href="https://github.com/yashveera29p2-art" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/yashaswee-veeraboyina" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year">2026</span> Yashaswee Veeraboyina<span class="cursor-blink" aria-hidden="true"></span></p>
+      <div class="footer__socials">
+        <a href="https://github.com/yashveera29p2-art" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/yashaswee-veeraboyina" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/scrollAnimations.js" defer></script>
+  <script src="js/particles.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

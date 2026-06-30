@@ -1,0 +1,148 @@
+/* ============================================
+   RESPONSIVE
+   Fine-tuning pass across breakpoints. Most layout
+   already adapts via clamp()/grid in layout.css —
+   this file handles the remaining edge cases:
+   spacing density, touch targets, and small-screen
+   specific adjustments.
+   ============================================ */
+
+/* ---------- Mobile (default, up to 599px) ---------- */
+@media (max-width: 599px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  .hero {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: var(--space-3);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .hero__scroll-cue {
+    display: none; /* avoid crowding short mobile viewports */
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .section__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .card,
+  .resume-band {
+    padding: var(--space-5);
+  }
+
+  .resume-band {
+    text-align: left;
+    align-items: stretch;
+  }
+
+  .resume-band .btn {
+    width: 100%;
+  }
+
+  /* Touch targets: ensure minimum 44px tap area */
+  .social-link,
+  .nav__toggle,
+  .nav-drawer__close {
+    width: 44px;
+    height: 44px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 14px 1fr;
+    gap: var(--space-4);
+  }
+
+  .skills__grid {
+    gap: var(--space-3);
+  }
+
+  .skill-chip {
+    padding: var(--space-4) var(--space-2);
+  }
+
+  .contact-card {
+    gap: var(--space-3);
+  }
+
+  .footer__inner {
+    gap: var(--space-5);
+  }
+}
+
+/* ---------- Tablet (600px – 959px) ---------- */
+@media (min-width: 600px) and (max-width: 959px) {
+  .hero__cta {
+    flex-wrap: wrap;
+  }
+
+  .about__grid {
+    gap: var(--space-6);
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Desktop+ (960px and up) ---------- */
+@media (min-width: 960px) {
+  .hero__cta {
+    display: flex;
+    gap: var(--space-4);
+  }
+}
+
+/* ---------- Wide screens: cap visual sprawl ---------- */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1240px;
+  }
+}
+
+/* ---------- Short viewports (landscape phones) ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-block: var(--space-9) var(--space-7);
+  }
+
+  .hero__scroll-cue {
+    display: none;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .nav,
+  .glow-blob,
+  .scan-line,
+  .hero__scroll-cue,
+  .nav-drawer {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

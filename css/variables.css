@@ -1,0 +1,119 @@
+/* ============================================
+   DESIGN TOKENS
+   Central source of truth for the visual system.
+   Every color, spacing, and type value used across
+   the site should reference a variable defined here.
+   ============================================ */
+
+:root {
+  /* ---------- Color: Base ---------- */
+  --color-bg: #0a0a0c;              /* primary background — near-black, not pure #000 */
+  --color-bg-elevated: #131317;     /* cards, panels sitting above base */
+  --color-bg-elevated-2: #1a1a1f;   /* nested panels, inputs */
+
+  /* ---------- Color: Accent (Red) ---------- */
+  --color-red: #e0263f;             /* primary accent — deep crimson, not neon */
+  --color-red-bright: #ff4757;      /* hover / active state */
+  --color-red-dim: #7a1424;         /* low-emphasis red, borders, backgrounds */
+
+  /* ---------- Color: Highlight (Cool Blue) ---------- */
+  --color-blue: #3d8bff;            /* glow + highlight only — used sparingly */
+  --color-blue-dim: #1d3a66;        /* faint blue borders / backgrounds */
+
+  /* ---------- Color: Text ---------- */
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #9a9aa2;
+  --color-text-tertiary: #5e5e66;
+  --color-text-on-accent: #ffffff;
+
+  /* ---------- Color: Structural ---------- */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-glass-bg: rgba(255, 255, 255, 0.035);
+  --color-glass-bg-hover: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  /* ---------- Typography: Families ---------- */
+  --font-display: 'Sora', -apple-system, sans-serif;       /* headings — geometric, technical */
+  --font-body: 'Inter', -apple-system, sans-serif;         /* body copy — neutral, readable */
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;  /* labels, status lines, code, eyebrows */
+
+  /* ---------- Typography: Scale (fluid via clamp) ---------- */
+  --fs-display-xl: clamp(2.75rem, 6vw + 1rem, 5.5rem);   /* hero name */
+  --fs-display-lg: clamp(2rem, 4vw + 1rem, 3.25rem);     /* section headings */
+  --fs-display-md: clamp(1.5rem, 2.5vw + 1rem, 2rem);    /* card titles */
+  --fs-body-lg: clamp(1.125rem, 1vw + 1rem, 1.375rem);   /* lead paragraphs */
+  --fs-body-md: 1rem;                                     /* default body */
+  --fs-body-sm: 0.875rem;                                 /* secondary text */
+  --fs-mono-label: 0.8125rem;                             /* eyebrow / status labels */
+  --fs-mono-xs: 0.6875rem;                                /* fine print, tags */
+
+  /* ---------- Typography: Weights ---------- */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---------- Typography: Line Height & Letter Spacing ---------- */
+  --lh-tight: 1.1;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.08em;    /* used on mono eyebrow labels for a "terminal" feel */
+
+  /* ---------- Spacing Scale (8px base unit) ---------- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+  --space-9: 6rem;      /* 96px */
+  --space-10: 8rem;     /* 128px */
+
+  /* ---------- Layout ---------- */
+  --container-max: 1180px;
+  --container-padding: clamp(1.25rem, 5vw, 3rem);
+  --section-padding-y: clamp(4rem, 10vw, 8rem);
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadow & Glow ---------- */
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 16px 50px rgba(0, 0, 0, 0.5);
+  --glow-red: 0 0 40px rgba(224, 38, 63, 0.25);
+  --glow-red-strong: 0 0 60px rgba(224, 38, 63, 0.4);
+  --glow-blue: 0 0 50px rgba(61, 139, 255, 0.18);
+  --glow-blue-soft: 0 0 80px rgba(61, 139, 255, 0.12);
+
+  /* ---------- Blur (Glassmorphism) ---------- */
+  --blur-glass: blur(16px);
+  --blur-glass-strong: blur(24px);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.8s;
+
+  /* ---------- Z-Index Scale ---------- */
+  --z-base: 1;
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}
+
+/* ---------- Breakpoints (reference only — used in media queries) ----------
+   mobile:  up to 599px   (default, no query needed)
+   tablet:  600px – 959px
+   desktop: 960px and up
+   wide:    1280px and up
+   --------------------------------------------------------------------- */
